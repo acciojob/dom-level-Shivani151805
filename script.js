@@ -3,11 +3,11 @@ function getDOMLevel() {
     let element = document.getElementById("level");
     let level = 0;
 
-    
+    // Traverse up the DOM tree to count ancestors including <html>
     while (element) {
         level++;
         element = element.parentElement;
     }
 
-    console.log("DOM Level:", level);
-    alert("DOM Level: " + level);
+    alert("The level of the element is: " + level);
+}
